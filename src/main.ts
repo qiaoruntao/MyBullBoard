@@ -39,11 +39,7 @@ const main = async () => {
     // update queues
     const client: IORedis.Redis = new Redis(redisOptions);
     setInterval(refreshQueues, parseInt(process.env.REFRESH_INTERVAL) || 10000)
-    try {
-        await refreshQueues(client, prefix);
-    } catch (e) {
-        console.error(e);
-    }
+    await refreshQueues(client, prefix);
 
     // start server
     app.use(listen_path, router)
