@@ -7,7 +7,8 @@
     "lib": [
       "es2015"
     ],
-    "target": "es5",
+    "outDir": "dist",
+    "target": "es6",
     "removeComments": true,
     "sourceMap": false
   }
