@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "declaration": true,
+    "declarationMap": true,
+    "composite": true,
+    "rootDir": "src",
+    "lib": [
+      "es2015"
+    ],
+    "target": "es5",
+    "removeComments": true,
+    "sourceMap": false
+  }
+}
