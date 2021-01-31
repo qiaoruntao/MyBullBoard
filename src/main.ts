@@ -33,6 +33,7 @@ const refreshQueues = async (client: IORedis.Redis, prefix: string) => {
 const main = async () => {
     const prefix = process.env.BULL_PREFIX || 'bull'
     const port = process.env.PORT || 3000;
+    const address = process.env.ADDRESS || "127.0.0.1";
 
     // update queues
     const client: IORedis.Redis = new Redis(redisOptions);
@@ -45,8 +46,8 @@ const main = async () => {
 
     // start server
     app.use('/', router)
-    app.listen(port, () => {
-        console.log(`dashboard service running on port ${port} `)
+    app.listen(port, address, () => {
+        console.log(`dashboard service running on port ${port} address ${address}`);
     });
 }
 
