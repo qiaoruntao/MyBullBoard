@@ -7,10 +7,11 @@
     "lib": [
       "es2015"
     ],
+    "module": "commonjs",
     "outDir": "dist",
     "target": "es6",
     "removeComments": true,
     "sourceMap": false,
-    "moduleResolution": "node"
+    "moduleResolution": "node",
   }
 }
